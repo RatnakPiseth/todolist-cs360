@@ -53,20 +53,43 @@
         <!--Layout 2 for to do list-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="600dp">
+            android:layout_height="600dp"
+            android:orientation="vertical">
+            <!--Todo list 1 -->
             <TextView
-                android:layout_width="600dp"
+                android:layout_width="390dp"
                 android:layout_height="70dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10.5dp"
                 android:textSize="30sp"
                 android:textAlignment="textStart"
                 android:layout_marginTop="30dp"
                 android:textColor="#FFF"
                 android:background="@drawable/box"/>
+            <!--Todo list 2 -->
             <TextView
-                android:layout_width="600dp"
+                android:layout_width="390dp"
                 android:layout_height="70dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10.5dp"
+                android:textSize="30sp"
+                android:textAlignment="textStart"
+                android:layout_marginTop="30dp"
+                android:textColor="#FFF"
+                android:background="@drawable/box"/>
+            <!--Todo list 3 -->
+            <TextView
+                android:layout_width="390dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10.5dp"
+                android:textSize="30sp"
+                android:textAlignment="textStart"
+                android:layout_marginTop="30dp"
+                android:textColor="#FFF"
+                android:background="@drawable/box"/>
+            <!--Todo list 4 -->
+            <TextView
+                android:layout_width="390dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10.5dp"
                 android:textSize="30sp"
                 android:textAlignment="textStart"
                 android:layout_marginTop="30dp"
