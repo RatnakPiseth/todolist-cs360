@@ -1,17 +1,15 @@
 package com.example.todolist;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class DoesAdapter extends RecyclerView.Adapter<DoesAdapter> {
+public abstract class DoesAdapter extends RecyclerView.Adapter<DoesAdapter.MyviewHolder> {
 
     Context context;
     ArrayList<com.example.anggarisky.doesapp.MyDoes> myDoes;
@@ -23,12 +21,15 @@ public class DoesAdapter extends RecyclerView.Adapter<DoesAdapter> {
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public MyviewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         return new MyviewHolder(LayoutInflater.from(context).inflate(R.layout.activity_main,viewGroup,false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder (@NonNull MyviewHolder myViewHolder,int i) {
+        myViewHolder.titledoes.setText(myDoes.get(i).getTitledoes());
+        myViewHolder.descodes.setText(myDoes.get(i).getDescdoes());
+        myViewHolder.datedoes.setText(myDoes.get(i).getDatedoes());
 
     }
 
@@ -38,6 +39,7 @@ public class DoesAdapter extends RecyclerView.Adapter<DoesAdapter> {
     }
 
     class MyviewHolder extends RecyclerView.ViewHolder{
+        TextView titledoes, descodes, datedoes;
 
         public MyviewHolder(@NonNull View itemView) {
             super(itemView);
