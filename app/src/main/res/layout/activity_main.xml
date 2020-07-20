@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,50 +7,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#F4E9E4"
+        android:background="#FFFF"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World"/>
+
         <!--Layout 1 for headline-->
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="290dp"
             android:background="#1D2A38"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/titlepage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:text="My Does"
-                android:textAlignment="center"
-                android:textColor="#FFF"
-                android:textSize="50dp" />
+            android:layout_height="198dp">
 
-            <TextView
-                android:id="@+id/subtitlepage"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:text="Let us help get your works done"
-                android:textAlignment="center"
-                android:textColor="#FFF"
-                android:textSize="25sp"/>
-            <Button
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:text="add tasks"
-                android:layout_marginLeft="105dp"
-                android:layout_marginTop="25dp"/>
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/titlepage"
+                        android:layout_marginTop="20dp"
+                        android:textSize="32sp"
+                        android:textColor="#FFF"
+                        android:text="My Does"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/subtitlepage"
+                        android:textSize="18sp"
+                        android:textColor="#4A4E6A"
+                        android:layout_marginTop="8dp"
+                        android:text="Finish Them Quickly Today"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="60dp"
+                    android:id="@+id/btnAddNew"
+                    android:text="+"
+                    android:background="@drawable/bgbtnnew"
+                    android:textSize="38sp"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
+
+
 
         <View
             android:layout_marginTop="20dp"
@@ -74,9 +103,4 @@
             android:text="No More Does"
             android:textAlignment="center"/>
     </LinearLayout>
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
